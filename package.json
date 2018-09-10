@@ -1,6 +1,6 @@
 {
   "name": "dzhumandzhu",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "",
   "main": "index.js",
   "bin": {
@@ -19,7 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/Frank-Kawp/project-lvl1-s340.git"
   },
-  "author": "",
+  "author": "Frank-Kawp",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Frank-Kawp/project-lvl1-s340/issues"
@@ -30,5 +30,8 @@
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-0": "^6.24.1"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.9"
   }
 }
