@@ -8,6 +8,13 @@
 
 [![Build Status](https://travis-ci.com/Frank-Kawp/project-lvl1-s340.svg?branch=master)](https://travis-ci.com/Frank-Kawp/project-lvl1-s340)
 
-# Setup
+# Setup brain-games
+Use the -g option that allow you to start brain-games from any folder. 
+Watch the instructions:
+[![asciicast](https://asciinema.org/a/9Ss7KDuGL8A2FXa7ZfRwDfK7q.png)](https://asciinema.org/a/9Ss7KDuGL8A2FXa7ZfRwDfK7q)
 
-[![asciicast](https://asciinema.org/a/rD7XwtT8KuftHhl6Y0Wu9acVo.png)](https://asciinema.org/a/rD7XwtT8KuftHhl6Y0Wu9acVo)
+# Brain-even gameplay
+[![asciicast](https://asciinema.org/a/OTtQ2H3P2tWYbxrQqYOhcRsoj.png)](https://asciinema.org/a/OTtQ2H3P2tWYbxrQqYOhcRsoj)
+
+# Brain-calc gameplay
+[![asciicast](https://asciinema.org/a/ikPUJPnOoYgJq2nKWeodSl0s8.png)](https://asciinema.org/a/ikPUJPnOoYgJq2nKWeodSl0s8)
