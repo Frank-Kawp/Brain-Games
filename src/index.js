@@ -1,21 +1,20 @@
 import readLineSync from 'readline-sync';
 
 console.log('Welcome to the Brain Games!');
-let userName = '';
 
-
-const sayHiToNewUser = () => {
-  const userAnswer = readLineSync.question('May I have your name? ');
-  userName = userAnswer;
+export const sayHiToNewUser = () => {
+  const userName = readLineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}`);
   console.log(' ');
+  return userName;
 };
 
 export const isEvenGame = () => {
   console.log('Answer "yes" if number even otherwise answer "no".');
   console.log(' ');
 
-  sayHiToNewUser();
+  const userName = sayHiToNewUser();
+
   let counter = 0;
 
   while (counter !== 3) {
@@ -35,5 +34,3 @@ export const isEvenGame = () => {
   }
   console.log(`Congratulations, ${userName}`);
 };
-
-export default sayHiToNewUser;
