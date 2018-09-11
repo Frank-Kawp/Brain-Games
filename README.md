@@ -11,10 +11,10 @@
 # Setup brain-games
 Use the -g option that allow you to start brain-games from any folder. 
 Watch the instructions:
-[![asciicast](https://asciinema.org/a/9Ss7KDuGL8A2FXa7ZfRwDfK7q.png)](https://asciinema.org/a/9Ss7KDuGL8A2FXa7ZfRwDfK7q)
+[![asciicast](https://asciinema.org/a/9Ss7KDuGL8A2FXa7ZfRwDfK7q.png)](https://asciinema.org/a/9Ss7KDuGL8A2FXa7ZfRwDfK7q?theme=solarized-light)
 
 # Brain-even gameplay
-[![asciicast](https://asciinema.org/a/OTtQ2H3P2tWYbxrQqYOhcRsoj.png)](https://asciinema.org/a/OTtQ2H3P2tWYbxrQqYOhcRsoj)
+[![asciicast](https://asciinema.org/a/OTtQ2H3P2tWYbxrQqYOhcRsoj.png)](https://asciinema.org/a/OTtQ2H3P2tWYbxrQqYOhcRsoj?theme=solarized-light)
 
 # Brain-calc gameplay
-[![asciicast](https://asciinema.org/a/ikPUJPnOoYgJq2nKWeodSl0s8.png)](https://asciinema.org/a/ikPUJPnOoYgJq2nKWeodSl0s8)
+[![asciicast](https://asciinema.org/a/ikPUJPnOoYgJq2nKWeodSl0s8.png)](https://asciinema.org/a/ikPUJPnOoYgJq2nKWeodSl0s8?theme=solarized-light)
