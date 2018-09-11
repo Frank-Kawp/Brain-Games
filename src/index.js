@@ -1,6 +1,6 @@
 import readLineSync from 'readline-sync';
 
-console.log('Welcome to the Brain Games!');
+export const aboutGameScreen = () => console.log('Welcome to the Brain Games!');
 
 export const sayHiToNewUser = () => {
   const userName = readLineSync.question('May I have your name? ');
@@ -9,28 +9,30 @@ export const sayHiToNewUser = () => {
   return userName;
 };
 
-export const isEvenGame = () => {
-  console.log('Answer "yes" if number even otherwise answer "no".');
+export const showGameDescription = (description) => {
+  console.log(description);
   console.log(' ');
+};
 
-  const userName = sayHiToNewUser();
+export const askUserInput = (question) => {
+  console.log(`Question: ${question}`);
+  const userAnswer = readLineSync.question('Your answer: ');
+  return userAnswer;
+};
 
-  let counter = 0;
+export const makeRandomNum = () => Math.floor(100 * Math.random() * 4);
 
-  while (counter !== 3) {
-    const quessNumber = Math.floor(100 * Math.random() * 4);
-    const correctAnswer = (quessNumber % 2 === 0) ? 'yes' : 'no';
+export const checkUserAnswer = (userAnswer, correctAnswer) => userAnswer === correctAnswer;
 
-    console.log(`Question: ${quessNumber}`);
-    const userAnswer = readLineSync.question('Your answer: ');
+export const sayCorrectToUser = () => {
+  console.log('Correct!');
+};
 
-    if (correctAnswer === userAnswer) {
-      console.log('Correct!');
-      counter += 1;
-    } else {
-      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}`);
-      console.log(`Let's try again, ${userName}`);
-    }
-  }
+export const sayWrongToUser = (userAnswer, correctAnswer, userName) => {
+  console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}`);
+  console.log(`Let's try again, ${userName}`);
+};
+
+export const congratulateUser = (userName) => {
   console.log(`Congratulations, ${userName}`);
 };

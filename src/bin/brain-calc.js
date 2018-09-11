@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-import startIsEvenGame from '../games/is-even';
+import startCalcGame from '../games/calc';
 import { aboutGameScreen, sayHiToNewUser, showGameDescription } from '..';
 
 aboutGameScreen();
-showGameDescription('Answer "yes" if number even otherwise answer "no".');
+showGameDescription('What is the result of the expression?');
 
 const userName = sayHiToNewUser();
 
-startIsEvenGame(userName);
+startCalcGame(userName);
