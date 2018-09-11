@@ -7,4 +7,4 @@
 
 # Setup
 
-[![asciicast](https://asciinema.org/a/sIPq89SEu5sXbJohbNwOAK2pE.png)](https://asciinema.org/a/sIPq89SEu5sXbJohbNwOAK2pE)
+[![asciicast](https://asciinema.org/a/rD7XwtT8KuftHhl6Y0Wu9acVo.png)](https://asciinema.org/a/rD7XwtT8KuftHhl6Y0Wu9acVo)
