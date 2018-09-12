@@ -18,3 +18,6 @@ Watch the instructions:
 
 # Brain-calc gameplay
 [![asciicast](https://asciinema.org/a/ikPUJPnOoYgJq2nKWeodSl0s8.png)](https://asciinema.org/a/ikPUJPnOoYgJq2nKWeodSl0s8?theme=solarized-light)
+
+# Brain-cgd gameplay 
+[![asciicast](https://asciinema.org/a/kDdVpPBISxSZZFM6rbh58EK7m.png)](https://asciinema.org/a/kDdVpPBISxSZZFM6rbh58EK7m?theme=solarized-light)
