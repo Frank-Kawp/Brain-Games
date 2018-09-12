@@ -1,6 +1,5 @@
 import { playDefaulGame, makeRandomNum } from '..';
 
-
 const description = 'Find the greatest common divisor of given numbers.';
 
 const genQuestion = () => {
