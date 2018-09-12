@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import sayHiToNewUser from '..';
+import { sayHelloToNewUser } from '..';
 
-sayHiToNewUser();
+sayHelloToNewUser();

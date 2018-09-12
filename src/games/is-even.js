@@ -1,28 +1,16 @@
-import {
-  askUserInput,
-  makeRandomNum,
-  checkUserAnswer,
-  sayCorrectToUser,
-  sayWrongToUser,
-  congratulateUser,
-} from '..';
+import { playDefaulGame, makeRandomNum } from '..';
 
-const startIsEvenGame = (userName) => {
-  let counter = 0;
+const description = 'Answer "yes" if number even otherwise answer "no".';
 
-  while (counter !== 3) {
-    const quessNum = makeRandomNum();
-    const correctAnswer = (quessNum % 2 === 0) ? 'yes' : 'no';
-    const userAnswer = askUserInput(quessNum);
+const genQuestion = makeRandomNum;
 
-    if (checkUserAnswer(userAnswer, correctAnswer)) {
-      sayCorrectToUser();
-      counter += 1;
-    } else {
-      sayWrongToUser(userAnswer, correctAnswer, userName);
-    }
+const genAnswer = (question) => {
+  if (question % 2 === 0) {
+    return 'yes';
   }
-  congratulateUser(userName);
+  return 'no';
 };
+
+const startIsEvenGame = () => playDefaulGame(description, genQuestion, genAnswer);
 
 export default startIsEvenGame;
