@@ -21,3 +21,9 @@ Watch the instructions:
 
 # Brain-cgd gameplay 
 [![asciicast](https://asciinema.org/a/kDdVpPBISxSZZFM6rbh58EK7m.png)](https://asciinema.org/a/kDdVpPBISxSZZFM6rbh58EK7m?theme=solarized-light)
+
+# Brain-balance gameplay
+[![asciicast](https://asciinema.org/a/waJKLDrijxJqduoLaXpRFu0FS.png)](https://asciinema.org/a/waJKLDrijxJqduoLaXpRFu0FS?theme=solarized-light) 
+
+# Brain-progression gameplay
+[![asciicast](https://asciinema.org/a/T9sPx0fprAUqGe6UUltnvnRCj.png)](https://asciinema.org/a/T9sPx0fprAUqGe6UUltnvnRCj?theme=solarized-light)
