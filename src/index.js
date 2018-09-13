@@ -20,6 +20,9 @@ const checkGameRes = (userAnswer, correctAnswer) => {
   if (typeof correctAnswer === 'number') {
     return Number(userAnswer) === correctAnswer;
   }
+  if (typeof correctAnswer === 'string' && typeof userAnswer === 'number') {
+    return String(userAnswer) === correctAnswer;
+  }
   return userAnswer === correctAnswer;
 };
 
