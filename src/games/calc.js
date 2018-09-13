@@ -1,4 +1,4 @@
-import { playDefaulGame, makeRandomNum } from '..';
+import { playDefaultGame, makeRandomNum } from '..';
 
 const description = 'What is the result of the expression?';
 
@@ -23,9 +23,8 @@ const genAnswer = (question) => {
   return a * b;
 };
 
-
 const startCalcGame = () => {
-  playDefaulGame(description, genQuestion, genAnswer);
+  playDefaultGame(description, genQuestion, genAnswer);
 };
 
 export default startCalcGame;

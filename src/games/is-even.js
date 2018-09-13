@@ -1,4 +1,4 @@
-import { playDefaulGame, makeRandomNum } from '..';
+import { playDefaultGame, makeRandomNum } from '..';
 
 const description = 'Answer "yes" if number even otherwise answer "no".';
 
@@ -11,6 +11,6 @@ const genAnswer = (question) => {
   return 'no';
 };
 
-const startIsEvenGame = () => playDefaulGame(description, genQuestion, genAnswer);
+const startIsEvenGame = () => playDefaultGame(description, genQuestion, genAnswer);
 
 export default startIsEvenGame;

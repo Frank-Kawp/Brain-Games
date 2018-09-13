@@ -1,12 +1,18 @@
 import readLineSync from 'readline-sync';
 
-
 const showGameDescription = (description) => {
   console.log('Welcome to the Brain Games!');
   if (typeof description !== 'undefined') {
     console.log(description);
   }
   console.log(' ');
+};
+
+
+const askUserInput = (question) => {
+  console.log(`Question: ${question}`);
+  const userAnswer = readLineSync.question('Your answer: ');
+  return userAnswer;
 };
 
 
@@ -26,35 +32,45 @@ export const sayHelloToNewUser = () => {
 };
 
 
-export const askUserInput = (question) => {
-  console.log(`Question: ${question}`);
-  const userAnswer = readLineSync.question('Your answer: ');
-  return userAnswer;
-};
-
-
 export const makeRandomNum = () => {
   const result = Math.floor(40 * Math.random() * 2);
   return result > 2 ? result : makeRandomNum();
 };
 
 
-export const playDefaulGame = (description, genQuestionFunc, genAnswerFunc) => {
+export const genPair = (genQuestionFunc, genAnswerFunc, counter) => {
+  const question = genQuestionFunc(counter);
+  const answer = genAnswerFunc(question);
+
+  const pair = (message) => {
+    if (message === 'question') return question;
+    if (message === 'answer') return answer;
+    return message;
+  };
+  return pair;
+};
+
+
+const getQuestion = pair => pair('question');
+
+const getAnswer = pair => pair('answer');
+
+
+export const playDefaultGame = (description, genQuestionFunc, genAnswerFunc) => {
   showGameDescription(description);
   const userName = sayHelloToNewUser();
 
   let counter = 0;
 
   while (counter !== 3) {
-    const question = genQuestionFunc(counter);
-    const correctAnswer = genAnswerFunc(question);
-    const userAnswer = askUserInput(question);
+    const pair = genPair(genQuestionFunc, genAnswerFunc, counter);
+    const userAnswer = askUserInput(getQuestion(pair));
 
-    if (checkGameRes(userAnswer, correctAnswer)) {
+    if (checkGameRes(userAnswer, getAnswer(pair))) {
       console.log('Correct!');
       counter += 1;
     } else {
-      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}`);
+      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${getAnswer(pair)}`);
       console.log(`Let's try again, ${userName}`);
     }
   }
