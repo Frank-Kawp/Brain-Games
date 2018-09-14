@@ -35,10 +35,7 @@ export const sayHelloToNewUser = () => {
 };
 
 
-export const makeRandomNum = () => {
-  const result = Math.floor(40 * Math.random() * 2);
-  return result > 2 ? result : makeRandomNum();
-};
+export const makeRandomNum = () => Math.round(1 + Math.random() * (80 - 1));
 
 
 export const genPair = (genQuestionFunc, genAnswerFunc, counter) => {
