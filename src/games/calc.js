@@ -23,8 +23,8 @@ const genAnswer = (question) => {
   return a * b;
 };
 
-const startCalcGame = () => {
-  playDefaultGame(description, genQuestion, genAnswer);
+const startCalcGame = (userName, whoStartTheGame) => {
+  playDefaultGame(userName, description, genQuestion, genAnswer, whoStartTheGame);
 };
 
 export default startCalcGame;

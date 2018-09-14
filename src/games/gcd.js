@@ -22,8 +22,8 @@ const genAnswer = (question) => {
 };
 
 
-const startGCDGame = () => {
-  playDefaultGame(description, genQuestion, genAnswer);
+const startGCDGame = (userName, whoStartTheGame) => {
+  playDefaultGame(userName, description, genQuestion, genAnswer, whoStartTheGame);
 };
 
 export default startGCDGame;

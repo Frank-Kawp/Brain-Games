@@ -1,11 +1,13 @@
 import readLineSync from 'readline-sync';
 
+import showMenu from './showmenu';
+
 const showGameDescription = (description) => {
-  console.log('Welcome to the Brain Games!');
   if (typeof description !== 'undefined') {
     console.log(description);
   }
   console.log(' ');
+  return true;
 };
 
 
@@ -22,6 +24,9 @@ const checkGameRes = (userAnswer, correctAnswer) => {
   }
   if (typeof correctAnswer === 'string' && typeof userAnswer === 'number') {
     return String(userAnswer) === correctAnswer;
+  }
+  if (typeof correctAnswer === 'string' && typeof userAnswer === 'string') {
+    return userAnswer.toLowerCase() === correctAnswer;
   }
   return userAnswer === correctAnswer;
 };
@@ -56,14 +61,21 @@ const getQuestion = pair => pair('question');
 const getAnswer = pair => pair('answer');
 
 
-export const playDefaultGame = (description, genQuestionFunc, genAnswerFunc) => {
-  showGameDescription(description);
-  const userName = sayHelloToNewUser();
+export const playDefaultGame = (userName, description, genQuest, genAnsw, menu) => {
+  let showedDescription = false;
+
+  if (typeof userName === 'undefined') {
+    console.log('Welcome to Brain Games!');
+    showedDescription = showGameDescription(description);
+    userName = sayHelloToNewUser();
+  }
+
+  if (!showedDescription) showGameDescription(description);
 
   let counter = 0;
 
   while (counter !== 3) {
-    const pair = genPair(genQuestionFunc, genAnswerFunc, counter);
+    const pair = genPair(genQuest, genAnsw, counter);
     const userAnswer = askUserInput(getQuestion(pair));
 
     if (checkGameRes(userAnswer, getAnswer(pair))) {
@@ -75,4 +87,9 @@ export const playDefaultGame = (description, genQuestionFunc, genAnswerFunc) => 
     }
   }
   console.log(`Congratulations, ${userName}!`);
+  console.log(' ');
+
+  if (typeof menu === 'undefined') return -1;
+
+  return showMenu(userName);
 };

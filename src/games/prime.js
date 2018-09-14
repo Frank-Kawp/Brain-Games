@@ -18,8 +18,8 @@ const genAnswer = (question) => {
 };
 
 
-const startPrime = () => {
-  playDefaultGame(description, genQuestion, genAnswer);
+const startPrimeGame = (userName, whoStartTheGame) => {
+  playDefaultGame(userName, description, genQuestion, genAnswer, whoStartTheGame);
 };
 
-export default startPrime;
+export default startPrimeGame;

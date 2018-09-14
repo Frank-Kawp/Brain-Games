@@ -26,8 +26,8 @@ const genAnswer = (question) => {
 };
 
 
-const startProgression = () => {
-  playDefaultGame(description, genQuestion, genAnswer);
+const startProgressionGame = (userName, whoStartTheGame) => {
+  playDefaultGame(userName, description, genQuestion, genAnswer, whoStartTheGame);
 };
 
-export default startProgression;
+export default startProgressionGame;

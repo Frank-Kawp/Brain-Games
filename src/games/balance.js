@@ -36,8 +36,8 @@ const genAnswer = (question) => {
 };
 
 
-const startBalance = () => {
-  playDefaultGame(description, genQuestion, genAnswer);
+const startBalanceGame = (userName, whoStartTheGame) => {
+  playDefaultGame(userName, description, genQuestion, genAnswer, whoStartTheGame);
 };
 
-export default startBalance;
+export default startBalanceGame;

@@ -11,6 +11,8 @@ const genAnswer = (question) => {
   return 'no';
 };
 
-const startIsEvenGame = () => playDefaultGame(description, genQuestion, genAnswer);
+const startIsEvenGame = (userName, whoStartTheGame) => {
+  playDefaultGame(userName, description, genQuestion, genAnswer, whoStartTheGame);
+};
 
 export default startIsEvenGame;
