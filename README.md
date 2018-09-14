@@ -27,3 +27,6 @@ Watch the instructions:
 
 # Brain-progression gameplay
 [![asciicast](https://asciinema.org/a/T9sPx0fprAUqGe6UUltnvnRCj.png)](https://asciinema.org/a/T9sPx0fprAUqGe6UUltnvnRCj?theme=solarized-light)
+
+# Brain-prime gameplay
+[![asciicast](https://asciinema.org/a/oxSZutU9bUhAZA5NiAzKIWEtJ.png)](https://asciinema.org/a/oxSZutU9bUhAZA5NiAzKIWEtJ?theme=solarized-light)
