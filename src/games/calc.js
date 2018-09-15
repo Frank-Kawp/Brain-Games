@@ -2,6 +2,7 @@ import { playDefaultGame, makeRandomNum } from '..';
 
 const maxSignNumber = 3;
 const maxNumber = 80;
+const description = 'What is the result of the expression?';
 
 
 const genQuestAndAswArray = () => {
@@ -20,7 +21,7 @@ const genQuestAndAswArray = () => {
 };
 
 
-const genPair = () => {
+const genQuestAndAswPair = () => {
   const arr = genQuestAndAswArray();
   const pair = (message) => {
     if (message === 'question') return arr[0];
@@ -32,10 +33,7 @@ const genPair = () => {
 
 
 const startCalcGame = () => {
-  console.log('Welcome to Brain Games!');
-  console.log('What is the result of the expression?');
-  console.log(' ');
-  playDefaultGame(genPair);
+  playDefaultGame(description, genQuestAndAswPair);
 };
 
 export default startCalcGame;

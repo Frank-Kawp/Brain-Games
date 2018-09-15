@@ -1,6 +1,7 @@
 import { playDefaultGame, makeRandomNum } from '..';
 
 const maxNumber = 80;
+const description = 'Is this number prime?';
 
 
 const isNumberPrime = (number) => {
@@ -21,7 +22,7 @@ const genQuestAndAswArray = () => {
 };
 
 
-const genPair = () => {
+const genQuestAndAswPair = () => {
   const arr = genQuestAndAswArray();
   const pair = (message) => {
     if (message === 'question') return arr[0];
@@ -33,10 +34,7 @@ const genPair = () => {
 
 
 const startPrimeGame = () => {
-  console.log('Welcome to Brain Games!');
-  console.log('Is this number prime?');
-  console.log(' ');
-  playDefaultGame(genPair);
+  playDefaultGame(description, genQuestAndAswPair);
 };
 
 export default startPrimeGame;

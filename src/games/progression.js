@@ -2,6 +2,7 @@ import { playDefaultGame, makeRandomNum } from '..';
 
 const maxNumber = 80;
 const maxStepNumber = 7;
+const description = 'What number is missing in this progression?';
 
 
 const genNewMemberOfProgression = (num, step) => num + step;
@@ -30,7 +31,7 @@ const genQuestAndAswArray = () => {
 };
 
 
-const genPair = () => {
+const genQuestAndAswPair = () => {
   const arr = genQuestAndAswArray();
   const pair = (message) => {
     if (message === 'question') return arr[0];
@@ -42,10 +43,7 @@ const genPair = () => {
 
 
 const startProgressionGame = () => {
-  console.log('Welcome to Brain Games!');
-  console.log('What number is missing in this progression?');
-  console.log(' ');
-  playDefaultGame(genPair);
+  playDefaultGame(description, genQuestAndAswPair);
 };
 
 export default startProgressionGame;

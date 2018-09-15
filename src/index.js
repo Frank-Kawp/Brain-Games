@@ -29,6 +29,12 @@ const checkGameRes = (userAnswer, correctAnswer) => {
   return userAnswer === correctAnswer;
 };
 
+const showGameDescription = (description) => {
+  console.log('Welcome to Brain Games!');
+  console.log(description);
+  console.log(' ');
+};
+
 
 export const makeRandomNum = max => Math.floor(Math.random() * Math.floor(max));
 
@@ -39,12 +45,13 @@ export const sayDefaultHello = () => {
   askUserName();
 };
 
-export const playDefaultGame = (genPair) => {
+export const playDefaultGame = (descriotion, getQuestionAnswerPair) => {
+  showGameDescription(descriotion);
   const userName = askUserName();
   let counter = 0;
 
   while (counter !== 3) {
-    const pair = genPair();
+    const pair = getQuestionAnswerPair();
     const userAnswer = askUserInput(getQuestion(pair));
 
     if (checkGameRes(userAnswer, getAnswer(pair))) {

@@ -1,13 +1,14 @@
 import { playDefaultGame, makeRandomNum } from '..';
 
 const maxNumber = 5000;
+const description = 'Balance the given number.';
+
 
 const balance = (str) => {
   const summ = str.split('').reduce((sum, current) => Number(sum) + Number(current));
   const average = Math.floor(summ / str.length);
   const summ2 = average * str.length;
   let diff = summ - summ2;
-
   const result = [];
 
   while (result.length !== str.length) {
@@ -30,7 +31,7 @@ const genQuestAndAswArray = () => {
 };
 
 
-const genPair = () => {
+const genQuestAndAswPair = () => {
   const arr = genQuestAndAswArray();
   const pair = (message) => {
     if (message === 'question') return arr[0];
@@ -42,10 +43,7 @@ const genPair = () => {
 
 
 const startBalanceGame = () => {
-  console.log('Welcome to Brain Games!');
-  console.log('Balance the given number.');
-  console.log(' ');
-  playDefaultGame(genPair);
+  playDefaultGame(description, genQuestAndAswPair);
 };
 
 export default startBalanceGame;

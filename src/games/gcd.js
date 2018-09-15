@@ -1,6 +1,7 @@
 import { playDefaultGame, makeRandomNum } from '..';
 
 const maxNumber = 40;
+const description = 'Find the greatest common divisor of given numbers.';
 
 const gcd = (a, b) => {
   if (a === 0) return b;
@@ -21,7 +22,7 @@ const genQuestAndAswArray = () => {
 };
 
 
-const genPair = () => {
+const genQuestAndAswPair = () => {
   const arr = genQuestAndAswArray();
   const pair = (message) => {
     if (message === 'question') return arr[0];
@@ -33,10 +34,7 @@ const genPair = () => {
 
 
 const startGCDGame = () => {
-  console.log('Welcome to Brain Games!');
-  console.log('Find the greatest common divisor of given numbers.');
-  console.log(' ');
-  playDefaultGame(genPair);
+  playDefaultGame(description, genQuestAndAswPair);
 };
 
 export default startGCDGame;
