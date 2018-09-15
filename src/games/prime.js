@@ -1,25 +1,42 @@
 import { playDefaultGame, makeRandomNum } from '..';
 
-const description = 'Is this number prime?';
+const maxNumber = 80;
 
-const isNumberPrime = (number, divisor) => {
-  if (number === 2 || number === divisor) return true;
-  if (number % divisor === 0) return false;
-  return isNumberPrime(number, divisor + 1);
+
+const isNumberPrime = (number) => {
+  const iter = (num, div) => {
+    if (number === 2 || number === div) return true;
+    if (number % div === 0) return false;
+    return iter(number, div + 1);
+  };
+  return iter(number, 2);
 };
 
 
-const genQuestion = () => makeRandomNum();
+const genQuestAndAswArray = () => {
+  const question = makeRandomNum(maxNumber);
+  const answer = isNumberPrime(question) === true ? 'yes' : 'no';
 
-
-const genAnswer = (question) => {
-  if (isNumberPrime(question, 2)) return 'yes';
-  return 'no';
+  return [question, answer];
 };
 
 
-const startPrimeGame = (userName, whoStartTheGame) => {
-  playDefaultGame(userName, description, genQuestion, genAnswer, whoStartTheGame);
+const genPair = () => {
+  const arr = genQuestAndAswArray();
+  const pair = (message) => {
+    if (message === 'question') return arr[0];
+    if (message === 'answer') return arr[1];
+    return message;
+  };
+  return pair;
+};
+
+
+const startPrimeGame = () => {
+  console.log('Welcome to Brain Games!');
+  console.log('Is this number prime?');
+  console.log(' ');
+  playDefaultGame(genPair);
 };
 
 export default startPrimeGame;

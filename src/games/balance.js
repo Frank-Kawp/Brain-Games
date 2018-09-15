@@ -1,43 +1,51 @@
 import { playDefaultGame, makeRandomNum } from '..';
 
-const description = 'Balance the given number.';
+const maxNumber = 5000;
 
-const genQuestion = () => makeRandomNum() * 5;
+const balance = (str) => {
+  const summ = str.split('').reduce((sum, current) => Number(sum) + Number(current));
+  const average = Math.floor(summ / str.length);
+  const summ2 = average * str.length;
+  let diff = summ - summ2;
 
-
-const balanceArray = (arr) => {
-  const summ1 = arr.reduce((sum, current) => sum + current);
-  const average = Math.floor(summ1 / arr.length);
   const result = [];
 
-  while (result.length < arr.length) {
+  while (result.length !== str.length) {
     result.push(average);
   }
 
-  let summ2 = result.reduce((sum, current) => sum + current);
-
-  for (let i = 0; summ2 < summ1; i += 1) {
+  for (let i = 0; diff !== 0; i += 1) {
     result[i] += 1;
-    summ2 = result.reduce((sum, current) => sum + current);
+    diff -= 1;
   }
-  return result;
-};
-
-const genAnswer = (question) => {
-  const args = String(question).split('');
-
-  for (let i = 0; i < args.length; i += 1) {
-    args[i] = Number(args[i]);
-  }
-
-  const result = balanceArray(args);
-  result.sort((a, b) => a - b);
-  return result.join('');
+  return result.sort((a, b) => a - b).join('');
 };
 
 
-const startBalanceGame = (userName, whoStartTheGame) => {
-  playDefaultGame(userName, description, genQuestion, genAnswer, whoStartTheGame);
+const genQuestAndAswArray = () => {
+  const question = makeRandomNum(maxNumber);
+  const answer = balance(String(question));
+
+  return [question, answer];
+};
+
+
+const genPair = () => {
+  const arr = genQuestAndAswArray();
+  const pair = (message) => {
+    if (message === 'question') return arr[0];
+    if (message === 'answer') return arr[1];
+    return message;
+  };
+  return pair;
+};
+
+
+const startBalanceGame = () => {
+  console.log('Welcome to Brain Games!');
+  console.log('Balance the given number.');
+  console.log(' ');
+  playDefaultGame(genPair);
 };
 
 export default startBalanceGame;

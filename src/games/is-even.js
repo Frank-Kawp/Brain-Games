@@ -1,18 +1,31 @@
 import { playDefaultGame, makeRandomNum } from '..';
 
-const description = 'Answer "yes" if number even otherwise answer "no".';
+const maxNumber = 80;
 
-const genQuestion = makeRandomNum;
+const genQuestAndAswArray = () => {
+  const question = makeRandomNum(maxNumber);
+  const answer = question % 2 === 0 ? 'yes' : 'no';
 
-const genAnswer = (question) => {
-  if (question % 2 === 0) {
-    return 'yes';
-  }
-  return 'no';
+  return [question, answer];
 };
 
-const startIsEvenGame = (userName, whoStartTheGame) => {
-  playDefaultGame(userName, description, genQuestion, genAnswer, whoStartTheGame);
+
+const genPair = () => {
+  const arr = genQuestAndAswArray();
+  const pair = (message) => {
+    if (message === 'question') return arr[0];
+    if (message === 'answer') return arr[1];
+    return message;
+  };
+  return pair;
+};
+
+
+const startIsEvenGame = () => {
+  console.log('Welcome to Brain Games!');
+  console.log('Answer "yes" if number even otherwise answer "no".');
+  console.log(' ');
+  playDefaultGame(genPair);
 };
 
 export default startIsEvenGame;

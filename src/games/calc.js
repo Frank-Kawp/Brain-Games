@@ -1,30 +1,41 @@
 import { playDefaultGame, makeRandomNum } from '..';
 
-const description = 'What is the result of the expression?';
+const maxSignNumber = 3;
+const maxNumber = 80;
 
-const genQuestion = (counter) => {
-  const signsGroup = '+-*';
-  const sign = signsGroup[counter];
-  const quessNum1 = makeRandomNum();
-  const quessNum2 = makeRandomNum();
+
+const genQuestAndAswArray = () => {
+  const quessNum1 = makeRandomNum(maxNumber);
+  const quessNum2 = makeRandomNum(maxNumber);
+  const signNum = makeRandomNum(maxSignNumber);
+  const sign = '+-*'[signNum];
+
   const question = `${quessNum1} ${sign} ${quessNum2}`;
-  return question;
+
+  let answer = quessNum1 + quessNum2;
+  if (signNum === 1) answer = quessNum1 - quessNum2;
+  if (signNum === 2) answer = quessNum1 * quessNum2;
+
+  return [question, answer];
 };
 
 
-const genAnswer = (question) => {
-  const args = question.split(' ');
-  const a = Number(args[0]);
-  const b = Number(args[2]);
-  const sign = args[1];
-
-  if (sign === '+') return a + b;
-  if (sign === '-') return a - b;
-  return a * b;
+const genPair = () => {
+  const arr = genQuestAndAswArray();
+  const pair = (message) => {
+    if (message === 'question') return arr[0];
+    if (message === 'answer') return arr[1];
+    return message;
+  };
+  return pair;
 };
 
-const startCalcGame = (userName, whoStartTheGame) => {
-  playDefaultGame(userName, description, genQuestion, genAnswer, whoStartTheGame);
+
+const startCalcGame = () => {
+  console.log('Welcome to Brain Games!');
+  console.log('What is the result of the expression?');
+  console.log(' ');
+  playDefaultGame(genPair);
 };
 
 export default startCalcGame;

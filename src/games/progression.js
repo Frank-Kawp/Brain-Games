@@ -1,14 +1,14 @@
 import { playDefaultGame, makeRandomNum } from '..';
 
-const description = 'What number is missing in this progression?';
+const maxNumber = 80;
+const maxStepNumber = 7;
 
-const makeRandomStep = () => Math.round(2 + Math.random() * (7 - 2));
 
 const genNewMemberOfProgression = (num, step) => num + step;
 
-const genQuestion = () => {
-  const progressionStep = makeRandomStep();
-  const initialNumber = makeRandomNum();
+const genQuestionFunc = () => {
+  const progressionStep = makeRandomNum(maxStepNumber);
+  const initialNumber = makeRandomNum(maxNumber);
 
   const iter = (str, num, step, acc) => {
     if (acc === 10) return str.slice(0, -1);
@@ -19,15 +19,33 @@ const genQuestion = () => {
 };
 
 
-const genAnswer = (question) => {
+const genQuestAndAswArray = () => {
+  const question = genQuestionFunc();
+
   const firstNumber = parseInt(question, 10);
   const secondNumber = parseInt(question.slice(-3), 10);
-  return Math.floor((secondNumber - firstNumber) / 8);
+  const answer = Math.floor((secondNumber - firstNumber) / 8);
+
+  return [question, answer];
 };
 
 
-const startProgressionGame = (userName, whoStartTheGame) => {
-  playDefaultGame(userName, description, genQuestion, genAnswer, whoStartTheGame);
+const genPair = () => {
+  const arr = genQuestAndAswArray();
+  const pair = (message) => {
+    if (message === 'question') return arr[0];
+    if (message === 'answer') return arr[1];
+    return message;
+  };
+  return pair;
+};
+
+
+const startProgressionGame = () => {
+  console.log('Welcome to Brain Games!');
+  console.log('What number is missing in this progression?');
+  console.log(' ');
+  playDefaultGame(genPair);
 };
 
 export default startProgressionGame;
