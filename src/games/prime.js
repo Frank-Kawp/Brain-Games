@@ -5,9 +5,11 @@ const description = 'Is this number prime?';
 
 
 const isNumberPrime = (number) => {
+  if (number === 1) return false;
+
   const iter = (num, div) => {
-    if (number === 2 || number === div) return true;
-    if (number % div === 0) return false;
+    if (div > num / 2) return true;
+    if (num % div === 0) return false;
     return iter(number, div + 1);
   };
   return iter(number, 2);
