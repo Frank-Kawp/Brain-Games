@@ -18,16 +18,12 @@ const getQuestion = pair => pair('question');
 const getAnswer = pair => pair('answer');
 
 
-const isNumber = num => typeof num === 'number';
-const isString = str => typeof str === 'string';
-
-
 const checkGameRes = (userAnswer, correctAnswer) => {
-  if (isNumber(userAnswer)) {
+  if (typeof userAnswer === 'number') {
     return Number(userAnswer) === correctAnswer;
-  } if (isString(correctAnswer) && isNumber(userAnswer)) {
+  } if (typeof correctAnswer === 'string' && typeof userAnswer === 'number') {
     return String(userAnswer) === correctAnswer;
-  } if (isString(correctAnswer) && isString(userAnswer)) {
+  } if (typeof correctAnswer === 'string' && typeof userAnswer === 'string') {
     return userAnswer.toLowerCase() === correctAnswer;
   }
   return userAnswer === correctAnswer;
