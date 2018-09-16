@@ -12,7 +12,9 @@ const genQuestAndAswPair = () => {
 
   const question = `${quessNum1} ${sign} ${quessNum2}`;
 
-  let answer = quessNum1 + quessNum2;
+  let answer = 0;
+
+  if (signNum === 0) answer = quessNum1 + quessNum2;
   if (signNum === 1) answer = quessNum1 - quessNum2;
   if (signNum === 2) answer = quessNum1 * quessNum2;
 
