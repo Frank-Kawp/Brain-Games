@@ -3,7 +3,6 @@ import { playDefaultGame, makeRandomNum } from '..';
 const maxNumber = 80;
 const description = 'Is this number prime?';
 
-
 const isNumberPrime = (number) => {
   if (number === 1) return false;
 
@@ -16,19 +15,13 @@ const isNumberPrime = (number) => {
 };
 
 
-const genQuestAndAswArray = () => {
+const genQuestAndAswPair = () => {
   const question = makeRandomNum(maxNumber);
   const answer = isNumberPrime(question) === true ? 'yes' : 'no';
 
-  return [question, answer];
-};
-
-
-const genQuestAndAswPair = () => {
-  const arr = genQuestAndAswArray();
   const pair = (message) => {
-    if (message === 'question') return arr[0];
-    if (message === 'answer') return arr[1];
+    if (message === 'question') return question;
+    if (message === 'answer') return answer;
     return message;
   };
   return pair;

@@ -4,8 +4,8 @@ const maxNumber = 80;
 const maxStepNumber = 7;
 const description = 'What number is missing in this progression?';
 
-
 const genNewMemberOfProgression = (num, step) => num + step;
+
 
 const genQuestionFunc = () => {
   const progressionStep = makeRandomNum(maxStepNumber);
@@ -20,22 +20,16 @@ const genQuestionFunc = () => {
 };
 
 
-const genQuestAndAswArray = () => {
+const genQuestAndAswPair = () => {
   const question = genQuestionFunc();
 
   const firstNumber = parseInt(question, 10);
   const secondNumber = parseInt(question.slice(-3), 10);
   const answer = Math.floor((secondNumber - firstNumber) / 8);
 
-  return [question, answer];
-};
-
-
-const genQuestAndAswPair = () => {
-  const arr = genQuestAndAswArray();
   const pair = (message) => {
-    if (message === 'question') return arr[0];
-    if (message === 'answer') return arr[1];
+    if (message === 'question') return question;
+    if (message === 'answer') return String(answer);
     return message;
   };
   return pair;

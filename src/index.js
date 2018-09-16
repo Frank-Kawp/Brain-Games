@@ -18,16 +18,7 @@ const getQuestion = pair => pair('question');
 const getAnswer = pair => pair('answer');
 
 
-const checkGameRes = (userAnswer, correctAnswer) => {
-  if (typeof userAnswer === 'number') {
-    return Number(userAnswer) === correctAnswer;
-  } if (typeof correctAnswer === 'string' && typeof userAnswer === 'number') {
-    return String(userAnswer) === correctAnswer;
-  } if (typeof correctAnswer === 'string' && typeof userAnswer === 'string') {
-    return userAnswer.toLowerCase() === correctAnswer;
-  }
-  return userAnswer === correctAnswer;
-};
+const checkGameRes = (userAnswer, correctAnswer) => userAnswer === correctAnswer;
 
 const showGameDescription = (description) => {
   console.log('Welcome to Brain Games!');
@@ -45,8 +36,8 @@ export const sayDefaultHello = () => {
   askUserName();
 };
 
-export const playDefaultGame = (descriotion, getQuestionAnswerPair) => {
-  showGameDescription(descriotion);
+export const playDefaultGame = (description, getQuestionAnswerPair) => {
+  showGameDescription(description);
   const userName = askUserName();
   let counter = 0;
 

@@ -8,7 +8,8 @@ const gcd = (a, b) => {
   return gcd(b % a, a);
 };
 
-const genQuestAndAswArray = () => {
+
+const genQuestAndAswPair = () => {
   const num1 = makeRandomNum(maxNumber);
   const num2 = makeRandomNum(maxNumber);
   const question = `${num1} ${num2}`;
@@ -18,15 +19,9 @@ const genQuestAndAswArray = () => {
   const arg2 = Number(args[1]);
   const answer = gcd(arg1, arg2);
 
-  return [question, answer];
-};
-
-
-const genQuestAndAswPair = () => {
-  const arr = genQuestAndAswArray();
   const pair = (message) => {
-    if (message === 'question') return arr[0];
-    if (message === 'answer') return arr[1];
+    if (message === 'question') return question;
+    if (message === 'answer') return String(answer);
     return message;
   };
   return pair;
