@@ -6,8 +6,23 @@
 
 <p align="center"><img src="https://travis-ci.com/Frank-Kawp/Brain-Games.svg?branch=master"></p>
 
-[![Build Status](https://travis-ci.com/Frank-Kawp/project-lvl1-s340.svg?branch=master)](https://travis-ci.com/Frank-Kawp/project-lvl1-s340)
+# About Brain-Games
+Brain-Games - is the frist educational project from Hexlet courses. It's simple as much as could be the simplest shell game.
+There are six games in the pack: 
+1. Quess the even number
+2. Quess the prime number
+3. Find a GCD of two numbers
+4. Find a missing number from progression
+5. Cacl game (add, multiply and subtract)
+6. Balance a couple of numbers (my favourite)
 
+# INSTALL 
+Make sure that you are using some of Unix systems.
+To run the game from the shell you should have installed node.js: https://nodejs.org/en/ 
+Enter the following command into the command line: npm install dzhumandzhu -g
+-g (global option) allows you to run this game from any folder
+
+<h1 align="center">Video instructions and gameplay demonstrations</h1>
 
 # Setup brain-games
 Use the -g option that allow you to start brain-games from any folder. 
