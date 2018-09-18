@@ -1,11 +1,14 @@
 <h1 align="center">Brain Games</h1>
 
 
-<p <h1 align="center">[![Maintainability](https://api.codeclimate.com/v1/badges/56879cd3669d3186baf0/maintainability)](https://codeclimate.com/github/Frank-Kawp/project-lvl1-s340/maintainability)</p>
+<p <h1 align="center"></p>
+[![Maintainability](https://api.codeclimate.com/v1/badges/56879cd3669d3186baf0/maintainability)](https://codeclimate.com/github/Frank-Kawp/project-lvl1-s340/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/56879cd3669d3186baf0/test_coverage)](https://codeclimate.com/github/Frank-Kawp/project-lvl1-s340/test_coverage)
+[![Build Status](https://travis-ci.com/Frank-Kawp/project-lvl1-s340.svg?branch=master)](https://travis-ci.com/Frank-Kawp/project-lvl1-s340)
 
-<p <h1 align="center">[![Test Coverage](https://api.codeclimate.com/v1/badges/56879cd3669d3186baf0/test_coverage)](https://codeclimate.com/github/Frank-Kawp/project-lvl1-s340/test_coverage)</p>
+<p <h1 align="center"></p>
 
-<p <h1 align="center">[![Build Status](https://travis-ci.com/Frank-Kawp/project-lvl1-s340.svg?branch=master)](https://travis-ci.com/Frank-Kawp/project-lvl1-s340)</p>
+<p <h1 align="center"></p>
 
 # Setup brain-games
 Use the -g option that allow you to start brain-games from any folder. 
