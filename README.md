@@ -1,8 +1,9 @@
 <h1 align="center">Brain Games</h1>
 
+<a align="center" href="https://codeclimate.com/github/Frank-Kawp/project-lvl1-s340/maintainability"><img src="https://api.codeclimate.com/v1/badges/56879cd3669d3186baf0/maintainability" ></a>
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/56879cd3669d3186baf0/maintainability)](https://codeclimate.com/github/Frank-Kawp/project-lvl1-s340/maintainability)
 
-<a href="https://codeclimate.com/github/Frank-Kawp/project-lvl1-s340/test_coverage"><img src="https://api.codeclimate.com/v1/badges/56879cd3669d3186baf0/test_coverage" /></a>
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/56879cd3669d3186baf0/test_coverage)](https://codeclimate.com/github/Frank-Kawp/project-lvl1-s340/test_coverage)
 
