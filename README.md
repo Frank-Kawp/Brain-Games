@@ -18,8 +18,11 @@ There are six games in the pack:
 
 # INSTALL 
 Make sure that you are using some of Unix systems.
+
 To run the game from the shell you should have installed node.js: https://nodejs.org/en/ 
+
 Enter the following command into the command line: npm install dzhumandzhu -g
+
 -g (global option) allows you to run this game from any folder
 
 <h1 align="center">Video instructions and gameplay demonstrations</h1>
