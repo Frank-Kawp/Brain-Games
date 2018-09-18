@@ -9,11 +9,11 @@
 # About Brain-Games
 Brain-Games - is the frist educational project from Hexlet courses. It's simple as much as could be the simplest shell game.
 There are six games in the pack: 
-1. Quess the even number
-2. Quess the prime number
+1. Guess the even number
+2. Guess the prime number
 3. Find a GCD of two numbers
 4. Find a missing number from progression
-5. Cacl game (add, multiply and subtract)
+5. Calc game (add, multiply and subtract)
 6. Balance a couple of numbers (my favourite)
 
 # INSTALL 
