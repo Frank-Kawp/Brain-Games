@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import { sayDefaultHello } from '..';
+import showMenu from '../showmenu';
 
-sayDefaultHello();
+showMenu();

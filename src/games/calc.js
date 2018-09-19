@@ -20,7 +20,7 @@ const genQuestAndAswPair = () => {
 
   const pair = (message) => {
     if (message === 'question') return question;
-    if (message === 'answer') return answer;
+    if (message === 'answer') return String(answer);
     return message;
   };
   return pair;

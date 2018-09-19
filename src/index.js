@@ -1,5 +1,7 @@
 import readLineSync from 'readline-sync';
 
+import { showMenu } from './showmenu';
+
 const askUserInput = (question) => {
   console.log(`Question: ${question}`);
   const userAnswer = readLineSync.question('Your answer: ');
@@ -14,11 +16,6 @@ const askUserName = () => {
   return userName;
 };
 
-const getQuestion = pair => pair('question');
-const getAnswer = pair => pair('answer');
-
-
-const checkGameRes = (userAnswer, correctAnswer) => userAnswer === correctAnswer;
 
 const showGameDescription = (description) => {
   console.log('Welcome to Brain Games!');
@@ -26,6 +23,10 @@ const showGameDescription = (description) => {
   console.log(' ');
 };
 
+const getQuestion = pair => pair('question');
+const getAnswer = pair => pair('answer');
+
+const checkGameRes = (userAnswer, correctAnswer) => userAnswer === correctAnswer;
 
 export const makeRandomNum = max => Math.floor(Math.random() * Math.floor(max));
 
@@ -35,6 +36,7 @@ export const sayDefaultHello = () => {
   console.log(' ');
   askUserName();
 };
+
 
 export const playDefaultGame = (description, getQuestionAnswerPair) => {
   showGameDescription(description);
@@ -54,4 +56,5 @@ export const playDefaultGame = (description, getQuestionAnswerPair) => {
     }
   }
   console.log(`Congratulations, ${userName}!`);
+  showMenu();
 };
