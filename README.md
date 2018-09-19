@@ -25,6 +25,12 @@ Enter the following command into the command line: npm install dzhumandzhu -g
 
 -g (global option) allows you to run this game from any folder
 
+# Run game menu
+
+After installing package game use followin command to see the game menu: brain-games
+
+![Game menu](https://yadi.sk/i/pR-lJderZ63JiA.png)
+
 <h1 align="center">Video instructions and gameplay demonstrations</h1>
 
 # Setup brain-games
