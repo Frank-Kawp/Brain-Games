@@ -24,9 +24,3 @@ To run the game from the shell you should have installed node.js: https://nodejs
 Enter the following command into the command line: npm install dzhumandzhu -g
 
 -g (global option) allows you to run this game from any folder
-
-# Game menu
-
-After installing game-package, use following command to see the game-menu: brain-games
-
-![Game menu](https://downloader.disk.yandex.ru/preview/f97689cd3e97a4b4941358f363088de60e51498e1fdd645c4643d433c29b5db2/5ba2403d/WqcD7yyE9Iy8ph2ehTWHkfPqY7g7Phn7_UMd9VbVPzbmdMGWYaWMNZnFMN_6sy_pn7B2kPstD-vyU-VUGQdPcA%3D%3D?uid=0&filename=123.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&tknv=v2&size=2048x2048)
