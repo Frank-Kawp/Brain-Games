@@ -30,28 +30,3 @@ Enter the following command into the command line: npm install dzhumandzhu -g
 After installing game-package, use following command to see the game-menu: brain-games
 
 ![Game menu](https://downloader.disk.yandex.ru/preview/f97689cd3e97a4b4941358f363088de60e51498e1fdd645c4643d433c29b5db2/5ba2403d/WqcD7yyE9Iy8ph2ehTWHkfPqY7g7Phn7_UMd9VbVPzbmdMGWYaWMNZnFMN_6sy_pn7B2kPstD-vyU-VUGQdPcA%3D%3D?uid=0&filename=123.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&tknv=v2&size=2048x2048)
-
-<h1 align="center">Video instructions and gameplay demonstrations</h1>
-
-# Setup brain-games
-Use the -g option that allow you to start brain-games from any folder. 
-Watch the instructions:
-[![asciicast](https://asciinema.org/a/9Ss7KDuGL8A2FXa7ZfRwDfK7q.png)](https://asciinema.org/a/9Ss7KDuGL8A2FXa7ZfRwDfK7q?theme=solarized-light)
-
-# Brain-even gameplay
-[![asciicast](https://asciinema.org/a/OTtQ2H3P2tWYbxrQqYOhcRsoj.png)](https://asciinema.org/a/OTtQ2H3P2tWYbxrQqYOhcRsoj?theme=solarized-light)
-
-# Brain-calc gameplay
-[![asciicast](https://asciinema.org/a/ikPUJPnOoYgJq2nKWeodSl0s8.png)](https://asciinema.org/a/ikPUJPnOoYgJq2nKWeodSl0s8?theme=solarized-light)
-
-# Brain-cgd gameplay 
-[![asciicast](https://asciinema.org/a/kDdVpPBISxSZZFM6rbh58EK7m.png)](https://asciinema.org/a/kDdVpPBISxSZZFM6rbh58EK7m?theme=solarized-light)
-
-# Brain-balance gameplay
-[![asciicast](https://asciinema.org/a/waJKLDrijxJqduoLaXpRFu0FS.png)](https://asciinema.org/a/waJKLDrijxJqduoLaXpRFu0FS?theme=solarized-light) 
-
-# Brain-progression gameplay
-[![asciicast](https://asciinema.org/a/T9sPx0fprAUqGe6UUltnvnRCj.png)](https://asciinema.org/a/T9sPx0fprAUqGe6UUltnvnRCj?theme=solarized-light)
-
-# Brain-prime gameplay
-[![asciicast](https://asciinema.org/a/oxSZutU9bUhAZA5NiAzKIWEtJ.png)](https://asciinema.org/a/oxSZutU9bUhAZA5NiAzKIWEtJ?theme=solarized-light)
